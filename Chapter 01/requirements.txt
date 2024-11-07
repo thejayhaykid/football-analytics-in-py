@@ -1,0 +1,11 @@
+appdirs==1.4.4
+cramjam==2.9.0
+fastparquet==2024.5.0
+fsspec==2024.10.0
+nfl_data_py==0.3.3
+numpy==1.26.4
+packaging==24.1
+pandas==1.5.3
+python-dateutil==2.9.0.post0
+pytz==2024.2
+six==1.16.0
