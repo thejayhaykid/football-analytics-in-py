@@ -7,14 +7,16 @@ z / 3
 
 # import packages
 # make sure you installed both packages using pip in the terminal
+year = 2022
 
 # Load data from the package
-chap_1_file = "../data/pbp_py_chap_1.csv"
+chap_1_file = f"../data/pbp_py_chap_1_{year}.csv"
 
 if os.path.isfile(chap_1_file):
     pbp_py = pd.read_csv(chap_1_file, low_memory=False)
 else:
-    pbp_py = nfl.import_pbp_data([2021])
+    print("Downloading data...")
+    pbp_py = nfl.import_pbp_data([year])
     pbp_py.to_csv(chap_1_file)
 
 # filter out passing data
