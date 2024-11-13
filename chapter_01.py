@@ -10,9 +10,10 @@ z / 3
 year = 2022
 
 # Load data from the package
-chap_1_file = f"../data/pbp_py_chap_1_{year}.csv"
+chap_1_file = f"./data/pbp_py_chap_1_{year}.csv"
 
 if os.path.isfile(chap_1_file):
+    print("Reading from local file...")
     pbp_py = pd.read_csv(chap_1_file, low_memory=False)
 else:
     print("Downloading data...")
