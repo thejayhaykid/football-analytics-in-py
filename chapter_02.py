@@ -2,6 +2,8 @@ import os
 import pandas as pd
 import numpy as np
 import nfl_data_py as nfl
+import seaborn as sns
+import matplotlib.pyplot as plt
 
 seasons = range(2016, 2022 + 1)
 
@@ -56,3 +58,7 @@ print(pbp_py_p.query('pass_length_air_yards == "long"')
 print("\nEPA on long passes")
 print(pbp_py_p.query('pass_length_air_yards == "long"')
       ["epa"].describe())
+
+divide()
+sns.displot(data=pbp_py, x="passing_yards")
+plt.show()
