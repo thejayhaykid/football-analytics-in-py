@@ -61,4 +61,22 @@ print(pbp_py_p.query('pass_length_air_yards == "long"')
 
 divide()
 sns.displot(data=pbp_py, x="passing_yards")
-plt.show()
+plt.savefig('data/chapter_02_plot_1.png')
+
+divide()
+pbp_py_p_short = pbp_py_p.query('pass_length_air_yards == "short"')
+
+pbp_py_hist_short = sns.displot(
+    data=pbp_py_p_short, binwidth=1, x="passing_yards")
+pbp_py_hist_short.set_axis_labels(
+    "Yards gained (or lost) during a passing play", "Count")
+plt.savefig('data/chapter_02_plot_2.png')
+
+divide()
+pbp_py_p_long = pbp_py_p.query('pass_length_air_yards == "long"')
+
+pbp_py_hist_long = sns.displot(
+    data=pbp_py_p_long, binwidth=1, x="passing_yards")
+pbp_py_hist_long.set_axis_labels(
+    "Yards gained (or lost) during a passing play", "Count")
+plt.savefig('data/chapter_02_plot_3.png')
