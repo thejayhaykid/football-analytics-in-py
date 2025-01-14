@@ -80,3 +80,10 @@ pbp_py_hist_long = sns.displot(
 pbp_py_hist_long.set_axis_labels(
     "Yards gained (or lost) during a passing play", "Count")
 plt.savefig('data/chapter_02_plot_3.png')
+
+divide()
+pass_boxplot = sns.boxplot(
+    data=pbp_py_p, x="pass_length_air_yards", y="passing_yards")
+pass_boxplot.set(xlabel="Pass length (long >= 20 yards, short < 20 yards)",
+                 ylabel="Yards gained (or lost) during a passing play",)
+plt.savefig('data/chapter_02_boxplot_1.png')
